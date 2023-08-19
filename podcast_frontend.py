@@ -59,12 +59,12 @@ def display_newsletter_content(podcast_info):
     with col4:
         write_guest_summary(st, podcast_info)
 
-    # Display the five key moments
+    # Display the key moments
     st.subheader("Key Moments")
     key_moments = podcast_info['podcast_highlights']
     for moment in key_moments:
         st.markdown(
-            f"<p style='margin-bottom: 5px;'>{moment}</p>", unsafe_allow_html=True)
+            f"<li style='margin-bottom: 5px;'>{moment}</li>", unsafe_allow_html=True)
 
 def write_guest_summary(st, podcast_info):
     st.subheader("Podcast Guest Details")
