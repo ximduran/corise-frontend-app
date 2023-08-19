@@ -37,6 +37,8 @@ def display_newsletter_content(podcast_info):
     # Display the podcast title
     st.subheader("Episode Title")
     st.write(podcast_info['podcast_details']['episode_title'])
+    if podcast_info['podcast_details']['episode_duration']:
+        st.write(f"Duration: {podcast_info['podcast_details']['episode_duration']}")
 
     # Display the podcast summary and the cover image in a side-by-side layout
     col1, col2 = st.columns([7, 3])
