@@ -32,13 +32,12 @@ def main():
 
 def display_newsletter_content(podcast_info):
     # Right section - Newsletter content
-    st.header("Newsletter Content")
+    st.header("Latest Episode")
 
     # Display the podcast title
-    st.subheader("Episode Title")
+    st.subheader(podcast_info['podcast_details']['episode_title'])
     if 'episode_published' in podcast_info['podcast_details']:
         st.write(f"**Last publication:** {podcast_info['podcast_details']['episode_published']}")
-    st.write(podcast_info['podcast_details']['episode_title'])
 
 
     # Display the podcast summary and the cover image in a side-by-side layout
