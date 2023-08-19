@@ -51,7 +51,7 @@ def main():
         # Display the five key moments
         st.subheader("Key Moments")
         key_moments = podcast_info['podcast_highlights']
-        for moment in key_moments.split('\n'):
+        for moment in key_moments:
             st.markdown(
                 f"<p style='margin-bottom: 5px;'>{moment}</p>", unsafe_allow_html=True)
 
