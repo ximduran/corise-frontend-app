@@ -32,7 +32,7 @@ def main():
 
 def display_newsletter_content(podcast_info):
     # Right section - Newsletter content
-    st.header("Latest Episode")
+    st.header(podcast_info['podcast_details']['podcast_title'])
 
     # Display the podcast title
     st.subheader(podcast_info['podcast_details']['episode_title'])
