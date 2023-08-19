@@ -94,7 +94,14 @@ def main():
 
         with col4:
             st.subheader("Podcast Guest Details")
-            st.write(podcast_info["podcast_guest"]['summary'])
+            if podcast_info['podcast_guest']['summary']:
+              st.write(podcast_info["podcast_guest"]['summary'])
+            else:
+              podcast_guest_title = podcast_info["podcast_guest"]['title']
+              podcast_guest_org = podcast_info["podcast_guest"]['organization']
+              short_description = f"{podcast_guest_title} at {podcast_guest_org}"
+              st.write(short_description)
+              
 
         # Display the five key moments
         st.subheader("Key Moments")
