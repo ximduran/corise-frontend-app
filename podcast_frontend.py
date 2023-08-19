@@ -45,7 +45,7 @@ def display_newsletter_content(podcast_info):
 
     with col1:
         # Display the podcast episode summary
-        st.subheader("Podcast Episode Summary")
+        #st.subheader("Podcast Episode Summary")
         if 'episode_duration' in podcast_info['podcast_details']:
             duration = podcast_info['podcast_details']['episode_duration']
             durationUnits = podcast_info['podcast_details']['episode_duration_units']
