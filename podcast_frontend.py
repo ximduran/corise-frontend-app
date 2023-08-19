@@ -74,14 +74,16 @@ def display_newsletter_content(podcast_info):
             f"<li style='margin-bottom: 5px;'>{moment}</li>", unsafe_allow_html=True)
 
 def write_guest_summary(st, podcast_info):
-    st.subheader("Podcast Guest Details")
     if podcast_info['podcast_guest']['summary']:
+        st.subheader("Podcast Guest Details")
         st.write(podcast_info["podcast_guest"]['summary'])
     else:
         podcast_guest_title = podcast_info["podcast_guest"]['title']
         podcast_guest_org = podcast_info["podcast_guest"]['organization']
-        short_description = f"{podcast_guest_title} at {podcast_guest_org}"
-        st.write(short_description)
+        if podcast_guest_title and podcast_guest_org:
+            st.subheader("Podcast Guest Details")
+            short_description = f"{podcast_guest_title} at {podcast_guest_org}"
+            st.write(short_description)
 
 def create_dict_from_json_files(folder_path):
     json_files = [f for f in os.listdir(folder_path) if f.endswith('.json')]
