@@ -36,8 +36,8 @@ def display_newsletter_content(podcast_info):
 
     # Display the podcast title
     st.subheader("Episode Title")
-    if podcast_info['podcast_details']['episode_duration']:
-        st.write(f"**Duration:** {podcast_info['podcast_details']['episode_duration']}")
+    if 'episode_published' in podcast_info['podcast_details']:
+        st.write(f"**Last publication:** {podcast_info['podcast_details']['episode_published']}")
     st.write(podcast_info['podcast_details']['episode_title'])
 
 
@@ -47,6 +47,8 @@ def display_newsletter_content(podcast_info):
     with col1:
         # Display the podcast episode summary
         st.subheader("Podcast Episode Summary")
+        if 'episode_duration' in podcast_info['podcast_details']:
+            st.write(f"**Episode Duration:** {podcast_info['podcast_details']['episode_duration']}")
         st.write(podcast_info['podcast_summary'])
         st.write(podcast_info['podcast_hashtags'])
 
