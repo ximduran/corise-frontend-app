@@ -51,7 +51,9 @@ def display_newsletter_content(podcast_info):
             durationUnits = podcast_info['podcast_details']['episode_duration_units']
             st.write(f"**Episode Duration:** {duration} {durationUnits}")
         st.write(podcast_info['podcast_summary'])
+        st.write("<p style='color: blue;'>")
         st.write(podcast_info['podcast_hashtags'])
+        st.write("</p>")
 
     with col2:
         st.image(podcast_info['podcast_details']['episode_image'], caption="Podcast Cover", width=300, use_column_width=True)
