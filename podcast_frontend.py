@@ -48,6 +48,7 @@ def display_newsletter_content(podcast_info):
         # Display the podcast episode summary
         st.subheader("Podcast Episode Summary")
         st.write(podcast_info['podcast_summary'])
+        st.write(podcast_info['podcast_hashtags'])
 
     with col2:
         st.image(podcast_info['podcast_details']['episode_image'], caption="Podcast Cover", width=300, use_column_width=True)
